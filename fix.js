@@ -1184,27 +1184,6 @@
                 }
             }()
               , Ae = function() {
-                if (Ee && !Ee.paused()) {
-                    var e = !1
-                      , t = Ee.currentTime()
-                      , n = Date.now()
-                      , r = 1e3 * (t - Se.videoCurrentTime) / (n - Se.currentTime) - F;
-                    F && (Ee.playbackRate() > F || r < 16 && r > .01) && Se.videoCurrentTime > 1 && (e = !0),
-                    e ? (Ze && Ze.destroy(),
-                    Ze = Y.Z.warn({
-                        content: "系统检测到倍速播放，已自动暂停学习，关闭倍速播放后可继续学习。",
-                        onOk: function() {
-                            Ze = null
-                        },
-                        getContainer: function() {
-                            return Ee.el()
-                        },
-                        className: de.alertModal
-                    }),
-                    Ee.playbackRate(1),
-                    Ee.pause()) : (Se.currentTime = n,
-                    Se.videoCurrentTime = t)
-                }
             }
               , De = function(e, t) {
                 Ee = t,
